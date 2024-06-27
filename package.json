@@ -1,0 +1,59 @@
+{
+  "name": "flarecms",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.14.18",
+    "@mui/material": "^5.14.18",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@tsndr/cloudflare-worker-jwt": "^2.3.2",
+    "drizzle-orm": "^0.29.1",
+    "i18next": "^23.7.11",
+    "luxon": "^3.4.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-i18next": "^14.0.0",
+    "react-quill": "^2.0.0",
+    "react-router-dom": "^6.19.0",
+    "react-scripts": "5.0.1",
+    "sanitize-html": "^2.11.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "build-functions": "wrangler pages functions build --outdir .wrangler/worker --minify && mv .wrangler/worker/index.js build/_worker.js",
+    "build-all": "npm run build && npm run build-functions",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@cloudflare/workers-types": "^4.20231025.0",
+    "@types/luxon": "^3.3.7",
+    "@types/sanitize-html": "^2.9.5",
+    "drizzle-kit": "^0.20.2",
+    "wrangler": "^3.62.0"
+  }
+}
